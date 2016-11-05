@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  players: 1
+  category: MyString
+  user_id: 1
+  time: 2016-11-04 22:01:07
+  date: 2016-11-04
+  description: MyText
+  latitude: 1.5
+  longitude: 1.5
+
+two:
+  players: 1
+  category: MyString
+  user_id: 1
+  time: 2016-11-04 22:01:07
+  date: 2016-11-04
+  description: MyText
+  latitude: 1.5
+  longitude: 1.5
