@@ -1,4 +1,4 @@
-<h1>Home#index</h1>
+<h1>Pick Up App</h1>
 <p>Find me in app/views/home/index.html.erb</p>
 <%= form_tag root_path, :method => 'get' do %>
   <p>
@@ -8,5 +8,9 @@
 <% end %>
 <%= link_to "Log in", new_user_session_url %>
 <%= link_to "Sign up", new_user_registration_url %>
+
+<% if current_user %>
+<%= link_to("Logout", destroy_user_session_path, :method => :delete) %>
+<% end %>
 
 <div id="map"></div>
