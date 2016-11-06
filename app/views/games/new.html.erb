@@ -1,2 +1,29 @@
-<h1>Games#new</h1>
-<p>Find me in app/views/games/new.html.erb</p>
+<h1>Create a New Game</h1>
+
+<%= form_for @game do |f| %>
+     <div class="ride-form">
+       <div class="field">
+         <%= f.label :date %><br />
+         <%= f.date_select :date, min: Date.today, id: "date" %>
+       </div>
+       <div class="field">
+         <%= f.label :time %><br />
+         <%= f.time_select :time, {ampm: true, minute_step: 30} %>
+       </div>
+       <div class="field">
+         <%= f.label :players %><br />
+         <%= f.select(:players, options_for_select([['1v1', '1v1'],['2v2', '2v2'],['3v3', '3v3'],['4v4', '4v4'],['5v5', '5v6'],['6v6', '6v6'],['7v7', '7v7'],['8v8', '8v8'],['9v9', '9v9'],['10v10', '10v10'],['11v11', '11v11']])) %>
+       </div>
+       <div class="field">
+         <%= f.label :category %><br />
+         <%= f.select(:category, options_for_select([['Soccer', 'Soccer'],['Basketball','Bastketball']])) %>
+       </div>
+       <div class="field">
+         <%= f.label :description %></br>
+         <%= f.text_field :description %>
+       </div>
+       <div class="actions">
+         <%= f.submit %>
+       </div>
+     </div>
+ <% end %>
