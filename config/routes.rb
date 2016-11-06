@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'games/index'
+
+  get 'games/new'
+
+  get 'games/show'
+
   root 'home#index'
 
   devise_for :users, :controllers => { registrations: 'registrations' }
