@@ -25,6 +25,6 @@ end
   private
 
   def game_params
-    params.require(:game).permit(:date, :time, :seats_available, :price, :comments, :start_location, :end_location, :completed)
+    params.require(:game).permit(:date, :time, :players, :description, :category)
   end
 end

@@ -1,2 +1,7 @@
 <h1>Games#show</h1>
 <p>Find me in app/views/games/show.html.erb</p>
+
+
+
+  <p>Players: <%= @game.players %></p></br>
+  <%= @game.time.to_time.strftime('%B %e at %l:%M %p') %>
