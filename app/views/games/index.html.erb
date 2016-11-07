@@ -1,2 +1,9 @@
 <h1>Games#index</h1>
 <p>Find me in app/views/games/index.html.erb</p>
+
+
+<% @games.each do |game| %>
+<br>
+<%= game.user.first_name %>
+<%= game.players %>
+<% end %>
