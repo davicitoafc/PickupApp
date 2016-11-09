@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161105050107) do
+ActiveRecord::Schema.define(version: 20161109012937) do
 
   create_table "games", force: :cascade do |t|
     t.integer  "players"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20161105050107) do
     t.float    "longitude"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.string   "location"
   end
 
   create_table "users", force: :cascade do |t|

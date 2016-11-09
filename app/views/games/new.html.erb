@@ -11,6 +11,10 @@
          <%= f.time_select :time, {ampm: true, minute_step: 30} %>
        </div>
        <div class="field">
+         <%= f.label :location %><br />
+         <%= f.text_field :location %>
+       </div>
+       <div class="field">
          <%= f.label :players %><br />
          <%= f.select(:players, options_for_select([['1v1', 2 ],['2v2', 4 ],['3v3', 6 ],
          ['4v4', 8 ],['5v5', 10 ],['6v6', 12 ],['7v7', 14 ],['8v8', 16 ],['9v9', 18 ],
