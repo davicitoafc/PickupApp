@@ -2,11 +2,10 @@
 <html>
   <head>
     <title>PickupApp</title>
+   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['google_maps_api_key'] %>&libraries=places"></script>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['google_maps_api_key'] %>&callback=initMap&library=places"
-   async defer></script>
   </head>
   <body>
      <p class="notice"><%= notice %></p>
