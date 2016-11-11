@@ -14,7 +14,6 @@
 //= require tether
 //= require jquery_ujs
 //= require geocomplete
-//= require jquery
-//= require bootstrap-sprockets
 //= require turbolinks
+//= require bootstrap-sprockets
 //= require_tree .
