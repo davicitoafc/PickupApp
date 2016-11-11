@@ -22,9 +22,13 @@
             </div>
             <div class="collapse navbar-collapse navbar-right" id="myNavbar">
               <ul class="nav navbar-nav nav_text">
-                  <li><a href="#about_me">About</a></li>
-                  <li><a href="#projects">Portfolio</a></li>
-                  <li><a href="#contact">Contact</a></li>
+                <li><%= link_to "Log in", new_user_session_url %></li>
+                <li><%= link_to "Sign up", new_user_registration_url %></li>
+
+                <% if current_user %>
+                <li><%= link_to("Logout", destroy_user_session_path, :method => :delete) %></li>
+                <li><%= link_to "Create Game", new_game_url %></li>
+                <% end %>
               </ul>
            </div>
          </div>
@@ -35,10 +39,3 @@
     <%= yield %>
   </body>
 </html>
-<%= link_to "Log in", new_user_session_url %>
-<%= link_to "Sign up", new_user_registration_url %>
-
-<% if current_user %>
-<%= link_to("Logout", destroy_user_session_path, :method => :delete) %>
-<%= link_to "Create Game", new_game_url %>
-<% end %>
