@@ -1,37 +1,40 @@
-<h1>Create a New Game</h1>
 
-<%= form_for @game do |f| %>
-     <div class="ride-form">
-       <div class="field">
-         <%= f.label :date %><br />
-         <%= f.date_select :date, min: Date.today, id: "date" %>
-       </div>
-       <div class="field">
-         <%= f.label :time %><br />
-         <%= f.time_select :time, {ampm: true, minute_step: 30} %>
-       </div>
-       <div class="field">
-         <%= f.label :location %><br />
-         <%= f.text_field :location, id: "location" %>
-       </div>
-       <div class="field">
-         <%= f.label :players %><br />
-         <%= f.select(:players, options_for_select([['1v1', 2 ],['2v2', 4 ],['3v3', 6 ],
-         ['4v4', 8 ],['5v5', 10 ],['6v6', 12 ],['7v7', 14 ],['8v8', 16 ],['9v9', 18 ],
-         ['10v10', 20 ],['11v11', 22 ]])) %>
-       </div>
-       <div class="field">
-         <%= f.label :category %><br />
-         <%= f.select(:category, options_for_select([['Soccer', 'Soccer'],['Basketball','Bastketball']])) %>
-       </div>
-       <div class="field">
-         <%= f.label :description %></br>
-         <%= f.text_field :description %>
-       </div>
-       <div class="actions">
-         <%= f.submit %>
-       </div>
-     </div>
- <% end %>
+<div class="container">
+  <h1>Create a New Game</h1>
 
- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['google_maps_api_key'] %>&libraries=places"></script>
+  <%= form_for @game do |f| %>
+       <div class="ride-form">
+         <div class="field">
+           <%= f.label :date %><br />
+           <%= f.date_select :date, min: Date.today, id: "date" %>
+         </div>
+         <div class="field">
+           <%= f.label :time %><br />
+           <%= f.time_select :time, {ampm: true, minute_step: 30} %>
+         </div>
+         <div class="field">
+           <%= f.label :location %><br />
+           <%= f.text_field :location, id: "location" %>
+         </div>
+         <div class="field">
+           <%= f.label :players %><br />
+           <%= f.select(:players, options_for_select([['1v1', 2 ],['2v2', 4 ],['3v3', 6 ],
+           ['4v4', 8 ],['5v5', 10 ],['6v6', 12 ],['7v7', 14 ],['8v8', 16 ],['9v9', 18 ],
+           ['10v10', 20 ],['11v11', 22 ]])) %>
+         </div>
+         <div class="field">
+           <%= f.label :category %><br />
+           <%= f.select(:category, options_for_select([['Soccer', 'Soccer'],['Basketball','Bastketball']])) %>
+         </div>
+         <div class="field">
+           <%= f.label :description %></br>
+           <%= f.text_field :description %>
+         </div>
+         <div class="actions">
+           <%= f.submit %>
+         </div>
+       </div>
+   <% end %>
+</div>
+
+ <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaVgoO0Vcm4DfI4GGgbVdbvmFedK_6Ecc&libraries=places"></script>
