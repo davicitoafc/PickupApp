@@ -15,6 +15,8 @@
 
 $black: black;
 $white: white;
+$font-family: 'Montserrat', sans-serif;
+;
 
 h1 {
   color: white;
@@ -25,6 +27,7 @@ h1 {
   text-align: center;
   background-color: #333333;
   border-radius: 10%;
+  font: $font-family;
 }
 
 .signUpContainer {
@@ -37,4 +40,9 @@ h1 {
 
 input {
   color: $black;
+}
+
+#map {
+  height: 400px;
+  overflow: visible;
 }

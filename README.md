@@ -24,5 +24,3 @@ Rails 5.0.0.1
 Google API, Weather API,
 
 * Deployment instructions
-
-* ...

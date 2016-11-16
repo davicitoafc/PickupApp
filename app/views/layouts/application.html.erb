@@ -6,6 +6,7 @@
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   </head>
   <body class="background">
     <nav class="navbar navbar-inverse">
@@ -27,7 +28,7 @@
                 <li><%= link_to "Create Game", new_game_url %></li>
                 <% else %>
                 <li><%= link_to "Log in", new_user_session_url %></li>
-                <li><%= link_to "Sign up", new_user_registration_url %></li>          
+                <li><%= link_to "Sign up", new_user_registration_url %></li>
               <% end %>
             </ul>
          </div>
