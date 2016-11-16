@@ -1,10 +1,10 @@
 
-var map;
 function initMap() {
-  map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: -34.397, lng: 150.644},
-    zoom: 8
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 10,
+    center: {lat: 37.7749, lng: -122.4194}
   });
+
   var infoWindow = new google.maps.InfoWindow({map: map});
 
          // Try HTML5 geolocation.
