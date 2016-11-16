@@ -11,13 +11,24 @@
   content: '';
 }
 
+/* Sign up page */
+
+$black: black;
+$white: white;
+
 h1 {
   color: white;
 }
 
 .signUpDiv {
-  color: white;
+  color: $white;
   text-align: center;
+  background-color: #333333;
+  border-radius: 10%;
+}
+
+.signUpContainer {
+  width: 25%;
 }
 
 .dateofbirth {
@@ -25,5 +36,5 @@ h1 {
 }
 
 input {
-  color: black;
+  color: $black;
 }
