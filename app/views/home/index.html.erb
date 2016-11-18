@@ -1,12 +1,9 @@
 <div class="container">
-  <%= form_tag root_path, :method => 'get' do %>
     <p>
-      <%= text_field_tag :search, params[:search] %>
-      <%= submit_tag "Search", :name => nil %>
+      <%= button_tag "Search", :class => 'btn btn-default search_button' %>
     </p>
-  <% end %>
    <div id="map">
-     
+
    </div>
 </div>
 

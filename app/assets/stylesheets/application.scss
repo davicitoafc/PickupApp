@@ -1,6 +1,10 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+$black: black;
+$white: white;
+$font-family: 'Montserrat', sans-serif;
+
 
 .background {
   background: image-url('background.jpg') no-repeat center center fixed;
@@ -9,14 +13,14 @@
   padding-bottom: 0;
   position: relative;
   content: '';
+  font-family: $font-family;
 }
 
-/* Sign up page */
+/* Navigation */
 
-$black: black;
-$white: white;
-$font-family: 'Montserrat', sans-serif;
-;
+
+
+/* Sign up page */
 
 h1 {
   color: white;
@@ -28,6 +32,7 @@ h1 {
   background-color: #333333;
   border-radius: 10%;
   font-family: $font-family;
+  border: 1px solid black;
 }
 
 .signUpContainer {
@@ -45,6 +50,7 @@ input {
 #map {
   height: 400px;
   overflow: visible;
+  border-radius: 2%;
 }
 
 div.field {
@@ -53,12 +59,4 @@ div.field {
 
 div.actions {
   padding: 10px;
-}
-
-div>input:hover {
-  background-color: black;
-}
-
-div>input {
-  background-color: white;
 }
