@@ -27,7 +27,7 @@ h1 {
   text-align: center;
   background-color: #333333;
   border-radius: 10%;
-  font: $font-family;
+  font-family: $font-family;
 }
 
 .signUpContainer {
@@ -45,4 +45,20 @@ input {
 #map {
   height: 400px;
   overflow: visible;
+}
+
+div.field {
+  padding: 10px;
+}
+
+div.actions {
+  padding: 10px;
+}
+
+div>input:hover {
+  background-color: black;
+}
+
+div>input {
+  background-color: white;
 }
