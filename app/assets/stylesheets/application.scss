@@ -60,3 +60,19 @@ div.field {
 div.actions {
   padding: 10px;
 }
+
+
+/* log in */
+
+.log_in {
+  color: $white;
+  text-align: center;
+  background-color: #333333;
+  border-radius: 10%;
+  font-family: $font-family;
+  border: 1px solid black;
+}
+
+.logInContainer {
+  width: 25%;
+}
