@@ -18,6 +18,15 @@ $font-family: 'Montserrat', sans-serif;
 
 /* Navigation */
 
+.navbar {
+  background: transparent;
+  border-color: transparent;
+  font-size: 1.7em;
+}
+
+.navbar-brand {
+  font-size: 1.7em;
+}
 
 
 /* Sign up page */
@@ -75,4 +84,10 @@ div.actions {
 
 .logInContainer {
   width: 25%;
+}
+
+/* create game */
+
+.field>label {
+  color: white;
 }
