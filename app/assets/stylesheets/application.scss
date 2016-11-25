@@ -22,12 +22,12 @@ $font-family: 'Montserrat', sans-serif;
   background: transparent;
   border-color: transparent;
   font-size: 1.7em;
+  color: white;
 }
 
 .navbar-brand {
   font-size: 1.7em;
 }
-
 
 /* Sign up page */
 
@@ -37,10 +37,10 @@ h1 {
 
 .signUpDiv {
   color: $white;
-  text-align: center;
-  background-color: #333333;
   border-radius: 10%;
   font-family: $font-family;
+  text-align: center;
+  background-color: #333333;
   border: 1px solid black;
 }
 
