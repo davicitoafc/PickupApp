@@ -46,8 +46,8 @@ http://localhost:3000/
 
 ## Deployed Version
 
-There is a live version of this app on heroku simply visit the following url:
+The live version of this app is deployed to heroku lives at this url:
 
 ```
-https://blooming-plateau-24802.herokuapp.com/ 
+https://blooming-plateau-24802.herokuapp.com/
 ```
