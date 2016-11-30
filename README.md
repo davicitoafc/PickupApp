@@ -1,26 +1,45 @@
-# README
+# pickupApp
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A rails app that helps sports enthusiasts find and organize pick up games in their area
 
-Things you may want to cover:
+## Technology
 
-* Ruby version
+ruby 2.3.0
 
 Rails 5.0.0.1
 
-* System dependencies
+Google Maps API
 
-* Configuration
+## Getting Started
 
-* Database creation
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-* Database initialization
+### Installing
 
-* How to run the test suite
+To run the development environment just clone the repo and in the directory do these steps:
 
-* Services (job queues, cache servers, search engines, etc.)
+Run bundle
 
-Google API, Weather API,
+```
+bundle install
+```
 
-* Deployment instructions
+Then
+
+```
+rails db:migrate
+```
+
+## Run a server
+
+After getting the app onto your machine, in the directory run:
+
+```
+rails s
+```
+
+Then go to your browser and type in:
+
+```
+http://localhost:3000/
+```
