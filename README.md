@@ -30,7 +30,7 @@ Then
 rails db:migrate
 ```
 
-## Run a server
+### Run a server
 
 After getting the app onto your machine, in the directory run:
 
@@ -42,4 +42,12 @@ Then go to your browser and type in:
 
 ```
 http://localhost:3000/
+```
+
+## Deployed Version
+
+There is a live version of this app on heroku simply visit the following url:
+
+```
+https://blooming-plateau-24802.herokuapp.com/ 
 ```
