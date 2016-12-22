@@ -25,7 +25,26 @@ function initMap() {
            handleLocationError(false, infoWindow, map.getCenter());
          }
 
-        
+         $.ajax({
+         	    type: "GET",
+         	    dataType: "json",
+         	    url: "/games",
+         	    success: function(data){
+         			for( var i=0; i<data.length; i++ ){
+         				// Pass the latitude and longitude from data to maps.
+         				var marker_latlng= new google.maps.LatLng(data[i].latitude,data[i].longitude);
+         				var marker = new google.maps.Marker({
+         					position: marker_latlng,
+         					map: map,
+         					title: 'Click me',
+         					});
+         						google.maps.event.addListener(marker, 'click', function() {
+         						      infowindow.open(map,marker);
+         						    });
+
+         				}
+         	}
+ 	});
 
 
        }
