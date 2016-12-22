@@ -1,4 +1,3 @@
-
 function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 10,
@@ -25,6 +24,10 @@ function initMap() {
            // Browser doesn't support Geolocation
            handleLocationError(false, infoWindow, map.getCenter());
          }
+
+        
+
+
        }
 
        function handleLocationError(browserHasGeolocation, infoWindow, pos) {

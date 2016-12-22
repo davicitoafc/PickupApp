@@ -1,4 +1,4 @@
-# pickupApp
+# pickupApp v.1
 
 A rails app that helps sports enthusiasts find and organize pick up games in their area
 
