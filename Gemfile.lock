@@ -42,6 +42,7 @@ GEM
     arel (7.1.4)
     autoprefixer-rails (6.5.1.1)
       execjs
+    awesome_print (1.7.0)
     bcrypt (3.1.11)
     bootstrap (4.0.0.alpha5)
       autoprefixer-rails (>= 6.0.3)
@@ -189,6 +190,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  awesome_print
   bootstrap
   bootstrap-sass (~> 3.3.6)
   byebug
