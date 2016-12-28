@@ -6,6 +6,7 @@ function initMap() {
 
   var infoWindow = new google.maps.InfoWindow({map: map});
 
+
          // Try HTML5 geolocation.
          if (navigator.geolocation) {
            navigator.geolocation.getCurrentPosition(function(position) {
@@ -14,32 +15,7 @@ function initMap() {
                lng: position.coords.longitude
              };
 
-            //  infoWindow.setPosition(pos);
-            //  infoWindow.setContent('Location found.');
              map.setCenter(pos);
-
-             $.ajax({
-                   type: "GET",
-                   dataType: "json",
-                   url: "/games",
-                   success: function(data){
-                   for( var i=0; i<data.length; i++ ){
-                     // Pass the latitude and longitude from data to maps.
-                     var marker_latlng= new google.maps.LatLng(data[i].latitude,data[i].longitude);
-                     var marker = new google.maps.Marker({
-                       position: marker_latlng,
-                       map: map,
-                       animation: google.maps.Animation.DROP,
-                       title: 'Click me',
-                       });
-                         google.maps.event.addListener(marker, 'click', function() {
-                               infowindow.open(map,marker);
-                             });
-
-                         }
-                      }
-                 });
-
 
            }, function() {
              handleLocationError(true, infoWindow, map.getCenter());
@@ -49,7 +25,66 @@ function initMap() {
            handleLocationError(false, infoWindow, map.getCenter());
          }
 
-     }
+
+        $.ajax({
+               type: "GET",
+               dataType: "json",
+               url: "/games",
+               success: function(data){
+                // loop through data to retrieve games
+               for( var i=0; i<data.length; i++ ){
+                // Pass the latitude and longitude from data to marker
+                 var marker_latlng= new google.maps.LatLng(data[i].latitude,data[i].longitude);
+                // Marker with game data
+                 var marker = new google.maps.Marker({
+                   position: marker_latlng,
+                   map: map,
+                   animation: google.maps.Animation.DROP,
+                   title: data[i].location,
+                   id: data[i].id,
+                   players: data[i].players,
+                   category: data[i].category,
+                   time: data[i].time
+                  });
+
+                google.maps.event.addListener(marker, 'click', function() {
+                      map.setCenter(this.position);
+                      map.setZoom(13);
+                });
+
+                var previousWindow = false
+
+                google.maps.event.addListener(marker, 'mouseover', function() {
+                   var gameLocation = this.title
+                   var gameType = this.category
+                   var gamePlayers = this.players/2
+                   var gameTime = this.time
+
+                   var gameInfo = '<div class="gameInfoDiv">' +
+                        '<h2>Game Location: ' + gameLocation + '</h2>' +
+                        '<h2>Players: ' + gamePlayers + ' vs ' + gamePlayers + ' </h2>' +
+                        '<h2>Sport: ' + gameType + ' </h2>' +
+                        '<h2>Time: ' + gameTime + ' </h2>' +
+                      '</div>';
+
+                      var infowindow = new google.maps.InfoWindow({
+                         content: gameInfo
+                      });
+
+                      if (previousWindow) {
+                        previousWindow.close();
+                      }
+
+                      previousWindow = infowindow
+
+                   infowindow.open(map, this);
+                }); // marker listener
+              } // loop for objects
+            } // success function
+          }); //ajax
+        } // map initialization
+
+
 
        function handleLocationError(browserHasGeolocation, infoWindow, pos) {
          infoWindow.setPosition(pos);
