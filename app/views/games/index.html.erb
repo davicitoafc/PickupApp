@@ -3,7 +3,10 @@
 
 
 <% @games.each do |game| %>
-<br>
-<%= game.user.first_name %>
-<%= game.players %>
+  <br>
+  <% if game.date > Date.today %>
+    <%= game.user.first_name %>
+    <%= game.players %>
+    <%= game.date %>
+  <% end %>
 <% end %>

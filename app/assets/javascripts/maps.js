@@ -45,7 +45,6 @@ function initMap() {
                  }
 
                  today = yyyy+'-'+mm+'-'+dd
-
                 // loop through data to retrieve games
                for( var i=0; i<data.length; i++ ){
                 // Pass the latitude and longitude from data to marker
@@ -63,9 +62,11 @@ function initMap() {
                    date: data[i].date
                   });
 
-                  var markers = []
-
-                  markers.push(marker);
+                  if (data[i].date < today) {
+                    marker.setMap(null);
+                  } else {
+                    console.log(false)
+                  }
 
                 google.maps.event.addListener(marker, 'click', function() {
                       map.setCenter(this.position);
