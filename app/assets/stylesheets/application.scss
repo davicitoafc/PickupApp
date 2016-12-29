@@ -16,13 +16,23 @@ $font-family: 'Montserrat', sans-serif;
   font-family: $font-family;
 }
 
+/* Home page */
+
+.welcomeDiv {
+  color: white;
+  float: left;
+  width: 25%;
+  text-align: justify;
+}
+
 /* Navigation */
 
 .navbar {
-  background: transparent;
+  background: black;
   border-color: transparent;
   font-size: 1.7em;
   color: white;
+  padding: 10px;
 }
 
 .navbar-brand {
