@@ -7,6 +7,10 @@ class Game < ApplicationRecord
   validates :date, :players, :description, :location, presence: true
   validate :correct_time
 
+  def update
+    
+  end
+
   def correct_time
    if date.past?
      errors.add(:date, "You cannot create a game in the past")

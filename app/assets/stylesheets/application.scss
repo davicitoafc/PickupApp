@@ -57,9 +57,11 @@ input {
 }
 
 #map {
-  height: 400px;
+  height: 500px;
   overflow: visible;
   border-radius: 2%;
+  width: 600px;
+  float: right;
 }
 
 div.field {
@@ -90,10 +92,4 @@ div.actions {
 
 .field>label {
   color: white;
-}
-
-/* game window */
-
-.gameInfoDiv {
-  
 }

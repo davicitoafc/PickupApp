@@ -31,6 +31,21 @@ function initMap() {
                dataType: "json",
                url: "/games",
                success: function(data){
+                 var today = new Date();
+                 var dd = today.getDate();
+                 var mm = today.getMonth()+1; //January is 0!
+                 var yyyy = today.getFullYear();
+
+                 if(dd<10) {
+                     dd='0'+dd
+                 }
+
+                 if(mm<10) {
+                     mm='0'+mm
+                 }
+
+                 today = yyyy+'-'+mm+'-'+dd
+
                 // loop through data to retrieve games
                for( var i=0; i<data.length; i++ ){
                 // Pass the latitude and longitude from data to marker
@@ -44,8 +59,13 @@ function initMap() {
                    id: data[i].id,
                    players: data[i].players,
                    category: data[i].category,
-                   time: data[i].time
+                   time: data[i].time,
+                   date: data[i].date
                   });
+
+                  var markers = []
+
+                  markers.push(marker);
 
                 google.maps.event.addListener(marker, 'click', function() {
                       map.setCenter(this.position);
@@ -55,16 +75,20 @@ function initMap() {
                 var previousWindow = false
 
                 google.maps.event.addListener(marker, 'mouseover', function() {
+
                    var gameLocation = this.title
                    var gameType = this.category
                    var gamePlayers = this.players/2
                    var gameTime = this.time
+                   var gameDate = this.date
 
-                   var gameInfo = '<div class="gameInfoDiv">' +
-                        '<h2>Game Location: ' + gameLocation + '</h2>' +
-                        '<h2>Players: ' + gamePlayers + ' vs ' + gamePlayers + ' </h2>' +
-                        '<h2>Sport: ' + gameType + ' </h2>' +
-                        '<h2>Time: ' + gameTime + ' </h2>' +
+                   var gameInfo = '<div class="content" style="font-size: 10px;text-align:center;">' +
+                        '<h3 style="font-size: 20px;">Game Location: <p style="font-size: 13px;">' + gameLocation + '</p></h3>' +
+                        '<h3 style="font-size: 20px;">Players: <br>' + gamePlayers + ' vs ' + gamePlayers + ' </h3>' +
+                        '<h3 style="font-size: 20px;">Sport: ' + gameType + ' </h3>' +
+                        '<h3 style="font-size: 20px;">Time: ' + gameTime + ' </h3>' +
+                        '<h3 style="font-size: 20px;">Date: ' + gameDate + ' </h3>' +
+                        '<a href="/games/'+ this.id + '">View Game</a>' +
                       '</div>';
 
                       var infowindow = new google.maps.InfoWindow({
