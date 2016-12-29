@@ -64,8 +64,6 @@ function initMap() {
 
                   if (data[i].date < today) {
                     marker.setMap(null);
-                  } else {
-                    console.log(false)
                   }
 
                 google.maps.event.addListener(marker, 'click', function() {
@@ -80,16 +78,14 @@ function initMap() {
                    var gameLocation = this.title
                    var gameType = this.category
                    var gamePlayers = this.players/2
-                   var gameTime = this.time
                    var gameDate = this.date
 
                    var gameInfo = '<div class="content" style="font-size: 10px;text-align:center;">' +
                         '<h3 style="font-size: 20px;">Game Location: <p style="font-size: 13px;">' + gameLocation + '</p></h3>' +
                         '<h3 style="font-size: 20px;">Players: <br>' + gamePlayers + ' vs ' + gamePlayers + ' </h3>' +
                         '<h3 style="font-size: 20px;">Sport: ' + gameType + ' </h3>' +
-                        '<h3 style="font-size: 20px;">Time: ' + gameTime + ' </h3>' +
                         '<h3 style="font-size: 20px;">Date: ' + gameDate + ' </h3>' +
-                        '<a href="/games/'+ this.id + '">View Game</a>' +
+                        '<a style="font-size: 20px;" href="/games/'+ this.id + '">View Game</a>' +
                       '</div>';
 
                       var infowindow = new google.maps.InfoWindow({
