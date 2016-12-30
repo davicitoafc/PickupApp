@@ -56,4 +56,4 @@ https://blooming-plateau-24802.herokuapp.com/
 
 The future features I would like to add to PickupApp is using Facebook Oath. This would ensure a new level of authentication and security to the app.
 
-Also, I want to gamify certain aspects of the app like using reputation points, and rating of games/players to create incentive. 
+Also, I want to gamify certain aspects of the app like using reputation points, and rating of games/players to create incentive in using the app. 
