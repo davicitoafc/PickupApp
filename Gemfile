@@ -65,6 +65,8 @@ gem 'bootstrap'
 
 gem 'jquery-turbolinks'
 
+gem 'omniauth-facebook'
+
 group :production do
   gem 'rails_12factor'
 end
