@@ -1,8 +1,8 @@
 <div class="gameDetails">
   <h1>Game</h1>
 
-
   <p>Game Organizer:<%= @game.user.first_name %></p>
   <p>Players: <%= @game.players %></p></br>
   <%= @game.time.to_time.strftime('%B %e at %l:%M %p') %>
+  <%= @game.fetch_weather %>
 </div>

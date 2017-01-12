@@ -67,6 +67,8 @@ gem 'jquery-turbolinks'
 
 gem 'omniauth-facebook'
 
+gem 'httparty'
+
 group :production do
   gem 'rails_12factor'
 end
