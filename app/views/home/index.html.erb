@@ -1,5 +1,7 @@
-<div class="homeContent">
+<!-- <div class="homeContent"> -->
   <div id="mainContainer" class="container">
+    <div class="row">
+     <div class="col-md-4">
       <% if current_user %>
       <h2 class="ontop">Hello <%= current_user.first_name %>!</h2>
       <p class="ontop2">Welcome back! Create a game or join one!</p>
@@ -9,11 +11,11 @@
       <% end %>
      <div class="welcomeDiv">
      </div>
-
+   </div>
        <div id="map">
 
        </div>
   </div>
-</div>
+<!-- </div> -->
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['google_maps_api_key'] %>&callback=initMap"
   async defer></script>
