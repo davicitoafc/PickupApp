@@ -70,6 +70,9 @@ input {
   color: $black;
 }
 
+select {
+  color: $black;
+}
 #map {
   height: 500px;
   overflow: visible;
@@ -106,6 +109,20 @@ div.actions {
   color: white;
 }
 
+.createGame {
+  color: $white;
+  text-align: center;
+  background-color: #333333;
+  border-radius: 10%;
+  font-family: $font-family;
+  border: 1px solid black;
+}
+
+.createGameDiv {
+  width: 25%;
+  margin-bottom: 30px
+}
+
 /* Game show page */
 
 .gameDetails {
@@ -121,6 +138,11 @@ div.actions {
 /* Media Query 700 */
 
 @media (max-width: 700px) {
+
+  select {
+    color: $black;
+    background: white;
+  }
 
   /* Home */
   #map {
@@ -194,6 +216,21 @@ div.actions {
 
     .signUpDiv {
       margin-bottom: 40px;
+    }
+    /* Game details */
+
+    .gameDetails {
+      width: 100%;
+    }
+
+    /* Create Game */
+
+    .createGameDiv {
+      width: 100%;
+    }
+
+    .createGame {
+      margin: 0 auto;
     }
 
 }
