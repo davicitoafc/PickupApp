@@ -1,19 +1,19 @@
-<div id="mainContainer" class="container">
-  <% if current_user %>
-  <h2 class="ontop">Hello <%= current_user.first_name %>!</h2>
-  <p class="ontop2">Welcome back! Create a game or join one!</p>
-  <% else %>
-  <h2 class="ontop">Hello!</h2>
-  <p class="ontop">Welcome to PickupApp! A web app dedicated to helping pickup enthusiast organize and find games in their area. </p>
-  <p class="ontop">Sign up to Create or join a game!</p>
-  <% end %>
- <div class="welcomeDiv">
- </div>
+<div class="homeContent">
+  <div id="mainContainer" class="container">
+      <% if current_user %>
+      <h2 class="ontop">Hello <%= current_user.first_name %>!</h2>
+      <p class="ontop2">Welcome back! Create a game or join one!</p>
+      <% else %>
+      <h2 class="ontop3">Hello!</h2>
+      <p class="ontop2">Welcome to PickupApp! A web app dedicated to helping pickup enthusiast organize and find games in their area.</br> Sign up to Create or join a game! </p>
+      <% end %>
+     <div class="welcomeDiv">
+     </div>
 
-   <div id="map">
+       <div id="map">
 
-   </div>
+       </div>
+  </div>
 </div>
-
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['google_maps_api_key'] %>&callback=initMap"
   async defer></script>
