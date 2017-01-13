@@ -70,10 +70,32 @@ function initMap() {
                   if (data[i].date < today) {
                     marker.setMap(null);
                   }
+
+              /* Mobile responsive map feature */
+
+              google.maps.event.addDomListener(window, "resize", function() {
+                  var center = map.getCenter();
+                  google.maps.event.trigger(map, "resize");
+                  map.setCenter(center);
+                });
+            
                 //Event listener to allow user to zoom in on marker with 1 click
                 google.maps.event.addListener(marker, 'click', function() {
                       map.setCenter(this.position);
                       map.setZoom(15);
+                      var featureOpts = [
+                        {
+                            "featureType": "poi.park",
+                            "stylers": [
+                              { "color": "#87CEFA" }
+                            ]
+                          }
+                        ]
+
+
+                        map.setOptions ({
+                            styles: featureOpts
+                        })
                 });
                 // Variable with boolean for infowindow
                 var previousWindow = false

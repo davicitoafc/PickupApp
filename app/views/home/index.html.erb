@@ -1,14 +1,13 @@
-<div class="container">
+<div id="mainContainer" class="container">
+  <% if current_user %>
+  <h2 class="ontop">Hello <%= current_user.first_name %>!</h2>
+  <p class="ontop2">Welcome back! Create a game or join one!</p>
+  <% else %>
+  <h2 class="ontop">Hello!</h2>
+  <p class="ontop">Welcome to PickupApp! A web app dedicated to helping pickup enthusiast organize and find games in their area. </p>
+  <p class="ontop">Sign up to Create or join a game!</p>
+  <% end %>
  <div class="welcomeDiv">
-
-    <% if current_user %>
-    <h2>Hello <%= current_user.first_name %>!</h2>
-    <p>Welcome back! Create a game or join one!</p>
-    <% else %>
-    <h2>Hello!</h2>
-    <p>Welcome to PickupApp! A web app dedicated to helping pickup enthusiast organize and find games in their area. </p>
-    <p>Sign up to Create or join a game!</p>
-    <% end %>
  </div>
 
    <div id="map">

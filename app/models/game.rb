@@ -12,10 +12,11 @@ class Game < ApplicationRecord
     self.longitude = longitude
 
    appID = 'e1b0f333867c7cac1ca29c6d5fb73b29'
-    puts url = 'http://api.openweathermap.org/data/2.5/forecast/daily?lat='+"#{latitude}"+'&lon='+"#{longitude}"+'&cnt=10&units=imperial&APPID='
+    puts url = 'http://api.openweathermap.org/data/2.5/forecast?lat='+"#{latitude}"+'&lon='+"#{longitude}"+'&cnt=10&units=imperial&APPID='
 
   response = HTTParty.get(url+appID)
-   return response.body
+    body = JSON.parse(response.body)
+    return body["list"]
   end
 
   def correct_time
