@@ -78,24 +78,12 @@ function initMap() {
                   google.maps.event.trigger(map, "resize");
                   map.setCenter(center);
                 });
-            
+
                 //Event listener to allow user to zoom in on marker with 1 click
                 google.maps.event.addListener(marker, 'click', function() {
                       map.setCenter(this.position);
                       map.setZoom(15);
-                      var featureOpts = [
-                        {
-                            "featureType": "poi.park",
-                            "stylers": [
-                              { "color": "#87CEFA" }
-                            ]
-                          }
-                        ]
-
-
-                        map.setOptions ({
-                            styles: featureOpts
-                        })
+                
                 });
                 // Variable with boolean for infowindow
                 var previousWindow = false
