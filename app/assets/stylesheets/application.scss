@@ -147,6 +147,38 @@ div.actions {
   height: 200px;
 }
 
+@media (max-width: 1024px) {
+  .signUpContainer {
+      width: 50%;
+  }
+
+  select {
+    color: $black;
+    background: white;
+  }
+
+  .createGameDiv {
+    width: 40%;
+  }
+
+}
+
+/* Media Query 750 */
+
+
+@media (max-width: 750px) {
+
+  .log_in {
+      width: 75%;
+  }
+  select {
+    color: $black;
+    background: white;
+  }
+
+
+}
+
 /* Media Query 700 */
 
 @media (max-width: 700px) {
@@ -244,5 +276,21 @@ div.actions {
     .createGame {
       margin: 0 auto;
     }
+
+}
+
+/* Media Query 600 */
+
+@media (max-width: 600px) {
+
+  .navbar-brand {
+    padding: 20px 0px;
+  }
+
+  select {
+    color: $black;
+    background: white;
+  }
+
 
 }
