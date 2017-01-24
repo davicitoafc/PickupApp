@@ -3,5 +3,5 @@
 
   <p>Game Organizer:<%= @game.user.first_name %></p>
   <p>Players: <%= @game.players %></p></br>
-  <%= @game.time.to_time.strftime('%B %e at %l:%M %p') %>
+  <%= @game.date.strftime("%m/%d/%Y") %> <%= @game.time.to_time.strftime('at %l:%M %p') %>
 </div>
