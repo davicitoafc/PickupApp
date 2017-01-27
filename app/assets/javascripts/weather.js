@@ -17,8 +17,9 @@ $(function() {
             if (formattedDate == gameDate) {
               var temp = weatherForecast[i].temp.max
               var icon = weatherForecast[i].weather[0].icon
-              $("div.gameDetails").append(temp, icon);
-            }   
+
+              $("div.gameDetails").append("<img src='http://openweathermap.org/img/w/" + icon + ".png' alt='Icon depicting current weather.'>", temp);
+            }
           }
        });
       }

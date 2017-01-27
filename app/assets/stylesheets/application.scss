@@ -138,13 +138,13 @@ div.actions {
 /* Game show page */
 
 .gameDetails {
+  width: 25%;
   color: white;
   text-align: center;
-  background-color: black;
-  width: 25%;
-  align-content: center;
-  margin: 0 auto;
-  height: 200px;
+  background-color: #333333;
+  border-radius: 10%;
+  font-family: "Montserrat", sans-serif;
+  border: 1px solid black;
 }
 
 .longitude_latitude {
