@@ -10,7 +10,9 @@ Rails 5.0.0.1
 
 Google Maps API
 
-Facebook Oath 
+Facebook Oath
+
+APIXU Weather API
 
 ## Getting Started
 
