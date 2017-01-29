@@ -7,7 +7,7 @@
    <div>
     <h1>Game</h1>
 
-    <p>Game Organizer:<%= @game.user.first_name %></p>
+    <p>Game Organizer: <%= @game.user.first_name %></p>
     <p>Players: <%= @game.players %></p></br>
     <%= @game.date.strftime("%m/%d/%Y") %> <%= @game.time.to_time.strftime('at %l:%M %p') %>
    </div>
@@ -16,5 +16,6 @@
       <div class="longitude"><%= @game.longitude %></div>
       <div class="latitude"><%= @game.latitude %></div>
    </div>
+   <br>
   </div>
   <% end %>
