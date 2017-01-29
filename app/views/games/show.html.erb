@@ -12,7 +12,7 @@
     <%= @game.date.strftime("%m/%d/%Y") %> <%= @game.time.to_time.strftime('at %l:%M %p') %>
    </div>
     <div class="longitude_latitude">
-      <div class="gameDate"><%= @game.date.strftime("%d-%m-%Y") %></div>
+      <div class="gameDate"><%= @game.date.strftime("%Y-%m-%d") %></div>
       <div class="longitude"><%= @game.longitude %></div>
       <div class="latitude"><%= @game.latitude %></div>
    </div>
