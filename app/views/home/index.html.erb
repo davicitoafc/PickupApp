@@ -3,7 +3,7 @@
     <div class="row">
      <div class="col-md-4">
       <% if current_user %>
-      <h2 class="ontop">Hello <%= current_user.first_name %>!</h2>
+      <h2 class="ontop">Hello <img src="<%= current_user.profile_image %>" alt=""> <%= current_user.first_name %>!</h2>
       <p class="ontop2">Welcome back! Create a game or join one!</p>
       <% else %>
       <h2 class="ontop3">Hello!</h2>
