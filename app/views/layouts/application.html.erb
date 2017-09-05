@@ -26,6 +26,7 @@
                 <% if current_user %>
                 <li><%= link_to("Logout", destroy_user_session_path, :method => :delete) %></li>
                 <li><%= link_to "Create Game", new_game_url %></li>
+                <li><%= link_to "My Profile", new_game_url %></li>
                 <% else %>
                 <li><%= link_to "Log in", new_user_session_url %></li>
                 <li><%= link_to "Sign up", new_user_registration_url %></li>
@@ -35,8 +36,9 @@
        </div>
       </nav>
 
-     <p class="notice"><%= notice %></p>
-     <p class="alert"><%= alert %></p>
+     <!-- <p class="notice"><%= notice %></p> -->
+     <!-- <p class="alert"><%= alert %></p> -->
     <%= yield %>
+    <%= render 'layouts/footer' %>
   </body>
 </html>
