@@ -15,7 +15,7 @@ class GamesController < ApplicationController
     @game = Game.new(game_params)
     @game.user_id = current_user.id
   if @game.save
-      redirect_to user_path(current_user)
+      redirect_to game_path(@game.id)
   else
     render :new
   end
