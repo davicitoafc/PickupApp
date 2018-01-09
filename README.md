@@ -6,7 +6,7 @@ A rails app that helps sports enthusiasts find and organize pick up games in the
 
 ruby 2.3.0
 
-Rails 5.0.0.1
+Rails 5.0.0.6
 
 Google Maps API
 
