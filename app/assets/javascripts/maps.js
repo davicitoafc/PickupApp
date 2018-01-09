@@ -5,7 +5,7 @@ function initMap() {
     //Sets map zoom to 9
     zoom: 9,
     //Default lat lng of San Francisco
-    center: {lat: 37.7749, lng: -122.4194}
+    center: {lat: 43.6532, lng: -79.411079}
   });
 
   var infoWindow = new google.maps.InfoWindow({map: map});
@@ -83,7 +83,7 @@ function initMap() {
                 google.maps.event.addListener(marker, 'click', function() {
                       map.setCenter(this.position);
                       map.setZoom(15);
-                
+
                 });
                 // Variable with boolean for infowindow
                 var previousWindow = false

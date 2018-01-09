@@ -32,7 +32,7 @@
         <%= f.label :password_confirmation %><br />
         <%= f.password_field :password_confirmation, autocomplete: "off" %>
       </div>
-
+      <%= link_to "Sign up with Facebook", user_facebook_omniauth_authorize_path %>
       <div class="actions">
         <%= f.submit "Sign up", :class => 'btn btn-default' %>
       </div>

@@ -1,6 +1,6 @@
 $(function() {
     $('#location').geocomplete({
-    country: "US",
+    country: "CA",
     types: "park"
   });
 });
