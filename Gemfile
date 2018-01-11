@@ -69,6 +69,8 @@ gem 'omniauth-facebook'
 
 gem 'httparty'
 
+gem 'pry-byebug'
+
 group :production do
   gem 'rails_12factor'
 end

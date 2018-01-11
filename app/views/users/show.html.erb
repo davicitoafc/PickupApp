@@ -1,4 +1,8 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
-
-<%= @user.first_name %>
+   <div class="userDetails container">
+    <% if @user.full_name.nil? %>
+     <h1><%= @user.first_name %> <%= @user.last_name %></h1>
+     <% else %>
+   <h1><%= @user.full_name %></h1>
+   <img class="userProfile" src="<%= @user.profile_image %>" alt="User Profile Image">
+    <% end %>
+  </div>

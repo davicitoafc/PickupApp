@@ -249,7 +249,7 @@ Devise.setup do |config|
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
   config.omniauth :facebook, ENV['facebook_app_id'], ENV['facebook_app_secret'], token_params: { parse: :json },
-                  callback_url: ENV['callback_url'] , scope: 'email', fields: 'email,first_name, last_name'
+                  callback_url: ENV['callback_url'] , scope: 'email', image_size: 'large',fields: 'email,first_name, last_name'
 
 
   # ==> Warden configuration
