@@ -1,8 +1,31 @@
-   <div class="userDetails container">
-    <% if @user.full_name.nil? %>
-     <h1><%= @user.first_name %> <%= @user.last_name %></h1>
-     <% else %>
-   <h1><%= @user.full_name %></h1>
-   <img class="userProfile" src="<%= @user.profile_image %>" alt="User Profile Image">
-    <% end %>
+   <div class="container userDetails">
+     <div class="row">
+     <div class="col-xs-6">
+
+      <% if @user.full_name.nil? %>
+       <h1><%= @user.first_name %> <%= @user.last_name %></h1>
+       <% else %>
+
+     <h1><%= @user.full_name %></h1>
+     <% end %>
+
+     <img class="userProfile" src="<%= @user.profile_image %>" alt="User Profile Image">
+     </div>
+
+
+
+     <div class="col-xs-6">
+      <div class="recentGames">
+        <h3>Recent Games Organized:</h3>
+         <% @games_organized.last(5).each do |game| %>
+         <div class="gameBox">
+
+        <p>Players: <%= game.players %></p>
+        <p>Category: <%= game.category %></p>
+        <p>Location: <%= game.location %></p>
+        <p>Date: <%= game.date %></p>
+         </div>
+         <% end %>
+    </div>
+   </div>
   </div>
