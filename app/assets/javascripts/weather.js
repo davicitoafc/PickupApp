@@ -6,7 +6,7 @@ $(function() {
   var latitude = $(".latitude").text();
   var gameDate = $(".gameDate").text();
 
-   $.getJSON( "https://api.apixu.com/v1/forecast.json?key=c24039352d9f4dfe9a3124854172701&q="+latitude+","+longitude+"&days=10", function(data) {
+   $.getJSON( "https://api.apixu.com/v1/forecast.json?key=a841ab8c258045b0931195134181901&q="+latitude+","+longitude+"&days=10", function(data) {
     weatherData = data.forecast.forecastday
      for (var i=0;i<weatherData.length;i++) {
         var formattedDate = weatherData[i].date
